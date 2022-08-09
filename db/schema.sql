@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS gator_db;
+CREATE DATABASE gator_db;
