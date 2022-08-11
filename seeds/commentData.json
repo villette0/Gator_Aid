@@ -1,14 +1,17 @@
 [
   {
     "comment": "that sounds like a beast!",
-    "user_id": 3
+    "user_id": 3,
+    "post_id": 1
   },
   {
     "comment": "I hope that gator saved some wine for you!!!",
-    "user_id": 1
+    "user_id": 1,
+    "post_id": 2
   },
   {
     "comment": "i hope you were able to still eat your Crunchwrap",
-    "user_id": 2
+    "user_id": 2,
+    "post_id": 3
   }
 ]
