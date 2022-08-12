@@ -1,0 +1,42 @@
+<form>
+    <h1>Edit Post</h1>
+    <div class="field">
+        <input id="post_id" type="hidden" value='{{post.id}}'>
+        <label class="label">Title</label>
+        <div class="control">
+            <input class="input" type="text" value='{{post.title}}'/>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Gator Description</label>
+        <div class="control">
+            <input class="input" type="text" value="{{post.description}}"/>
+        </div>
+    </div>
+    
+
+    <div class="field">
+        <label class="label">Encounter Details</label>
+        <div class="control">
+            <textarea class="textarea" >{{post.sighting}}</textarea>
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Date</label>
+        <div class="control">
+            <input class="input" type="text" value='{{format_date createdAt}}'>
+        </div>
+    </div>
+
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-link">Update</button>
+        </div>
+        <div class="control">
+            <button class="button is-link is-light">Cancel</button>
+        </div>
+    </div>
+
+</form>
