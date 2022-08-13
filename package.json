@@ -29,6 +29,7 @@
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.19",
     "sequelize": "^6.21.3",
+    "start": "^5.1.0",
     "uid-safe": "^2.1.5"
   },
   "devDependencies": {
