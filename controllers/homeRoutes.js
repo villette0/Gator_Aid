@@ -111,5 +111,11 @@ router.get('/login', (req, res) => {
   
     res.render('login');
   });
+
+  router.get('/create-post', withAuth, async (req, res) => {
+    res.render('create-post', {
+      logged_in: req.session.logged_in
+    });
+  });
   
   module.exports = router;

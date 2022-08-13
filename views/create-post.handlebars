@@ -1,23 +1,23 @@
-<form>
+<form class="new-post-form">
     <h1>Create New Post</h1>
     <div class= "field">
         <label class="label">Title</label>
         <div class="control">
-            <input class="input" type="text" placeholder="Title">
+            <input class="input" type="text" id="title" placeholder="Title">
         </div>
     </div>
 
     <div class="field">
         <label class="label">Gator Description</label>
         <div class="control">
-            <input class="input" type="text" placeholder="Physical description">
+            <input class="input" type="text" id="description" placeholder="Physical description">
         </div>
     </div>
 
     <div class="field">
         <label class="label">Encounter Details</label>
         <div class="control">
-            <textarea class="textarea" placeholder="Text Area"></textarea>
+            <textarea class="textarea" id="detail" placeholder="Text Area"></textarea>
         </div>
     </div>
 
@@ -26,8 +26,10 @@
             <button class="button is-link">Submit</button>
         </div>
         <div class="control">
-            <button class="button is-link is-light">Cancel</button>
+            <button id="submit" class="button is-link is-light">Cancel</button>
         </div>
     </div>
 
 </form>
+
+<script src="/js/create.js"></script>
