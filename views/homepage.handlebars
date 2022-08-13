@@ -1,16 +1,39 @@
-<div>Sightings</div>
-{{#each posts as |post| }}
-<div class="all-posts-container">
-  <div>
-    <h2>
-      <a href="/post/{{post.id}}">{{post.title}}</a>
-    </h2>
-    <p class="created-by">Created by {{post.user.userName}} on {{post.date}}</p>
+<div>
+  <h2>Recent Sightings</h2>
+  {{#each posts as |post| }}
+  <div class="all-posts-container">
+
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          <a href="/post/{{post.id}}">{{post.title}}</a>
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+          <span class="icon">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+        </button>
+      </header>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+          <p>{{post.sighting}}</p>
+        </div>
+        <div class="content">
+          <p>Gator description: {{post.description}}</p>
+        </div>
+        <p>Created by {{post.user.userName}} on {{format_date post.date}}</p>
+      </div>
+    </div>
+
   </div>
-  <div>
-    <p>
-      {{post.description}}
-    </p>
-  </div>
+
+  {{/each}}
 </div>
-{{/each}}
+
+<div class='geolocator'>
+  <img src=https://placehold.jp/500x600.png"/>
+  
+</div>

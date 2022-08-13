@@ -9,14 +9,67 @@
   </head>
   <body>
     <header>
-      {{! nav links in here }} 
+      <section class="hero">
+        <div class="hero-body">
+          <p class="title">Gator Tracker</p>
+        </div>
+      </section>
+
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+        <a href="/homepage" class="navbar-item">Home</a>
+
+          {{#if logged_in}}
+        <a href="/dashboard" class="navbar-item">Dashboard</a>
+        <button class="no-button button is-light" id="logout">logout</button>
+        {{else}}
+        <a href="/login" class="button is-light">
+            Log in
+        </a>
+        <a href="/login" class="button is-primary">
+            <strong>Sign up</strong>
+        </a>
+        {{/if}}
+          {{!-- <a href="/homepage" class="navbar-item">Home</a>
+
+          <a href="/dashboard" class="navbar-item">Dashboard</a>
+
+          <a href="/login" class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          
+          <a href="/login" class="button is-light">
+            Log in
+          </a>
+          <a href="/logout" id="logout" class="button is-light">
+            Logout
+          </a> --}}
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
     </header>
-    <main>
-        <h1>Gator Tracker</h1>
+    <main>        
       {{{body}}}
     </main>
     <footer>
 
     </footer>
+   {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
   </body>
 </html>
