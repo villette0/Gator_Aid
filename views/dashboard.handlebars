@@ -5,48 +5,21 @@
 <div class="post-archive">
     <h2>Your Recent Sightings</h2>
     {{#each posts as |post| }}
-    <div class="all-posts-container">
+    {{> post-details}}
+    <p>Created on {{format_date date}}</p>
 
-        <div class="card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    <a href="/post/{{post.id}}">{{post.title}}</a>
-                </p>
-                <button class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                </button>
-            </header>
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="content">
-                    <p>{{post.sighting}}</p>
-                </div>
-                <div class="content">
-                    <p>Gator description: {{post.description}}</p>
-                </div>
-                    <p>Created by {{post.user.userName}} on {{format_date post.date}}</p>
-            </div>
-        </div>
-
-        <div id="edit-button" class="edit-button">
-            {{!-- <button type="click" data-id="{{post.id}}">Edit</button> --}}
-            <a href="/edit-post" class="button is-link">Edit
+    <div id="edit-button" class="edit-button">
+        {{!-- <button type="click" data-id="{{post.id}}">Edit</button> --}}
+        <a href="/edit-post" class="button is-link">Edit
         </a>
-
-        </div>
-
-        <div class="delete-button">
-            <button class="button is-danger" type="click" data-id="{{post.id}}">Delete</button>
-        </div>
-
     </div>
 
+    <div class="delete-button">
+        <button class="button is-danger" type="click" data-id="{{post.id}}">Delete</button>
+    </div>
+    
     {{/each}}
-</div>
+
 </div>
 
 <script src="/js/dashboard.js"></script>
