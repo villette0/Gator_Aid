@@ -23,20 +23,25 @@
         </div>
     </div>
 
-    <div class="field">
+    {{!-- <div class="field">
         <label class="label">Date</label>
         <div class="control">
-            <input class="input" type="text" value='{{format_date post.date}}'>
+            <input class="input" type="text" value='{{format_date date}}'>
         </div>
-    </div>
+    </div> --}}
 
     <div class="field is-grouped">
-        <div class="control">
-            <button class="button is-link">Update</button>
+        <div class="control" "submit-edit">
+            <button type="submit" class="button is-link">Update</button>
         </div>
         <div class="control">
-            <button class="button is-link is-light">Cancel</button>
+            <a href="/dashboard" class="button is-light">
+            Cancel
+        </a>
+            {{!-- <button class="button is-link is-light">Cancel</button> --}}
         </div>
     </div>
 
 </form>
+
+<script src="/js/edit.js"></script>

@@ -127,5 +127,11 @@ router.get('/login', (req, res) => {
       logged_in: req.session.logged_in
     });
   });
+
+  router.get('/edit-post', withAuth, async (req, res) => {
+    res.render('edit-post', {
+      logged_in: req.session.logged_in
+    });
+  });
   
   module.exports = router;
