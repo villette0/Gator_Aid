@@ -1,13 +1,9 @@
 <div>
-    <h2>WELCOME </h2>
+    <h1>Welcome {{userName}}</h1>
+</div>
 
-    <p>What would you like to do?</p>
-
-    <a href="/create-post" class="navbar-item">Create New Post</a>
-    {{!-- <a href="/" class="navbar-item">View My Posts Archive</a> --}}
-
-    <div>
-  <h2>YOUR Recent Sightings</h2>
+<div>
+  <h2>Your Recent Sightings</h2>
   {{#each posts as |post| }}
   <div class="all-posts-container">
 
