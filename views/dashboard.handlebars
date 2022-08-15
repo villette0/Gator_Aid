@@ -1,52 +1,63 @@
 <div>
-    <h2>WELCOME </h2>
+  <h2>WELCOME </h2>
 
-    <p>What would you like to do?</p>
+  <iframe
+    width="600px"
+    height="600px"
+    src="https://api.mapbox.com/styles/v1/batgalkatlyn/cl6oilslx000614qqdzj24swp.html?title=false&access_token=pk.eyJ1IjoiYmF0Z2Fsa2F0bHluIiwiYSI6ImNsNm9meWpxZTBhbHozaXRldHhldGp5NDEifQ.wTNr-1vm16YK7gpQFGuXtw&zoomwheel=true#7.07/27.828/-81.554"
+    title="Gator Tracker"
+    style="border: double green 6px"
+  ></iframe>
 
-    <a href="/create-post" class="navbar-item">Create New Post</a>
-    {{!-- <a href="/" class="navbar-item">View My Posts Archive</a> --}}
+  <p>What would you like to do?</p>
 
-    <div>
-  <h2>YOUR Recent Sightings</h2>
-  {{#each posts as |post| }}
-  <div class="all-posts-container">
+  <a href="/create-post" class="navbar-item">Create New Post</a>
+  {{! <a href="/" class="navbar-item">View My Posts Archive</a> }}
 
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          <a href="/post/{{post.id}}">{{post.title}}</a>
-        </p>
-        <button class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true"></i>
-          </span>
-        </button>
-      </header>
-    </div>
+  <div>
+    <h2>YOUR Recent Sightings</h2>
+    {{#each posts as |post|}}
+      <div class="all-posts-container">
 
-    <div class="card">
-      <div class="card-content">
-        <div class="content">
-          <p>{{post.sighting}}</p>
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              <a href="/post/{{post.id}}">{{post.title}}</a>
+            </p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </header>
         </div>
-        <div class="content">
-          <p>Gator description: {{post.description}}</p>
+
+        <div class="card">
+          <div class="card-content">
+            <div class="content">
+              <p>{{post.sighting}}</p>
+            </div>
+            <div class="content">
+              <p>Gator description: {{post.description}}</p>
+            </div>
+            <p>Created by
+              {{post.user.userName}}
+              on
+              {{format_date post.date}}</p>
+          </div>
         </div>
-        <p>Created by {{post.user.userName}} on {{format_date post.date}}</p>
+
+        <div class="edit-button">
+          <button type="submit">Edit</button>
+
+        </div>
+
+        <div class="delete-button">
+          <button type="submit">Delete</button>
+        </div>
+
       </div>
-    </div>
 
-    <div class="edit-button">
-        <button type="submit">Edit</button>
-
-    </div>
-
-    <div class="delete-button">
-        <button type="submit">Delete</button>
-    </div>
-
+    {{/each}}
   </div>
-
-  {{/each}}
-</div>
 </div>
