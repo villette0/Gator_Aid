@@ -65,6 +65,9 @@ The JSON documents include:
 
 ## Languages
 - JavaScript
+- HTML
+- CSS
+- Handlebars
 
 
 ## Links
@@ -76,10 +79,18 @@ The JSON documents include:
 ![image](./assets/images/readme-screenshot.png)
 
 ## Credit
-Villette Comfort
+Villette Comfort: 
 
-Tracy Guajardo
+[Villette's GitHub Profile](https://github.com/villettec)
 
-Katlyn Green
+Tracy Guajardo: 
 
-Gerardo Garcia
+[Tracy's GitHub Profile](https://github.com/tracyroseguajardo)
+
+Katlyn Green: 
+
+[Katlyn's GitHub Profile](https://github.com/batgal)
+
+Gerardo Garcia: 
+
+[Gerardo's GitHub Profile](https://github.com/1ggarcia101)
