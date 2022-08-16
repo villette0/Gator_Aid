@@ -12,8 +12,7 @@
     <p>Created on {{format_date post.date}}</p>
 
     <div id="edit-button" class="edit-button">
-            {{!-- <button class="button is-link" type="click" data-id="{{post.id}}">Edit</button> --}}
-      <a href="/edit-post" class="button is-link">Edit</a>
+      <a href="/edit-post/{{post.id}}" class="button is-link" data-id="{{post.id}}">Edit</a>
     </div>
 
     <div class="delete-button">
