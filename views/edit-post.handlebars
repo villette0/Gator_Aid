@@ -4,7 +4,7 @@
         <input id="post_id" type="hidden" value='{{post.id}}'>
         <label class="label">Title</label>
         <div class="control">
-            <input class="input" type="text" value='{{post.title}}'/>
+            <input class="input" id="title" type="text" value='{{post.title}}'/>
         </div>
     </div>
 
@@ -23,20 +23,22 @@
         </div>
     </div>
 
-    <div class="field">
+    {{!-- <div class="field">
         <label class="label">Date</label>
         <div class="control">
-            <input class="input" type="text" value='{{format_date post.date}}'>
+            <input class="input" type="text" value='{{format_date date}}'>
         </div>
-    </div>
+    </div> --}}
 
     <div class="field is-grouped">
-        <div class="control">
-            <button class="button is-link">Update</button>
+        <div class="control" "submit-edit">
+            <button type="submit" class="button is-link">Update</button>
         </div>
         <div class="control">
-            <button class="button is-link is-light">Cancel</button>
+            <a href="/dashboard" class="button is-light">Cancel</a>
         </div>
     </div>
 
 </form>
+
+<script src="/js/edit.js"></script>

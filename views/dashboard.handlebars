@@ -1,63 +1,27 @@
 <div>
-  <h2>WELCOME </h2>
+  <h1>Welcome, {{userName}} !</h1>
 
-  <iframe
-    width="600px"
-    height="600px"
+  <iframe width="600px" height="600px"
     src="https://api.mapbox.com/styles/v1/batgalkatlyn/cl6oilslx000614qqdzj24swp.html?title=false&access_token=pk.eyJ1IjoiYmF0Z2Fsa2F0bHluIiwiYSI6ImNsNm9meWpxZTBhbHozaXRldHhldGp5NDEifQ.wTNr-1vm16YK7gpQFGuXtw&zoomwheel=true#7.07/27.828/-81.554"
-    title="Gator Tracker"
-    style="border: double green 6px"
-  ></iframe>
-
-  <p>What would you like to do?</p>
-
-  <a href="/create-post" class="navbar-item">Create New Post</a>
-  {{! <a href="/" class="navbar-item">View My Posts Archive</a> }}
+    title="Gator Tracker" style="border: double green 6px"></iframe>
 
   <div>
     <h2>YOUR Recent Sightings</h2>
     {{#each posts as |post|}}
-      <div class="all-posts-container">
+    {{> post-details}}
+    <p>Created on {{format_date post.date}}</p>
 
-        <div class="card">
-          <header class="card-header">
-            <p class="card-header-title">
-              <a href="/post/{{post.id}}">{{post.title}}</a>
-            </p>
-            <button class="card-header-icon" aria-label="more options">
-              <span class="icon">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </header>
-        </div>
+    <div id="edit-button" class="edit-button">
+      <a href="/edit-post/{{post.id}}" class="button is-link" data-id="{{post.id}}">Edit</a>
+    </div>
 
-        <div class="card">
-          <div class="card-content">
-            <div class="content">
-              <p>{{post.sighting}}</p>
-            </div>
-            <div class="content">
-              <p>Gator description: {{post.description}}</p>
-            </div>
-            <p>Created by
-              {{post.user.userName}}
-              on
-              {{format_date post.date}}</p>
-          </div>
-        </div>
-
-        <div class="edit-button">
-          <button type="submit">Edit</button>
-
-        </div>
-
-        <div class="delete-button">
-          <button type="submit">Delete</button>
-        </div>
-
-      </div>
+    <div class="delete-button">
+      <button class="button is-danger" type="click" data-id="{{post.id}}">Delete</button>
+    </div>
 
     {{/each}}
   </div>
+
 </div>
+
+<script src="/js/dashboard.js"></script>

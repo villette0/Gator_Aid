@@ -1,75 +1,64 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gator Tracker</title>
-    <link rel="stylesheet" href="/public/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  </head>
-  <body>
-    <header>
-      <section class="hero">
-        <div class="hero-body">
-          <p class="title">Gator Tracker</p>
-        </div>
-      </section>
 
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gator Tracker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
+<body>
+  <header>
+    <section class="hero">
+      <div class="hero-body">
+        <h1 class="title">Gator Tracker</h1>
+      </div>
+    </section>
 
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-        <a href="/homepage" class="navbar-item">Home</a>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
 
-          {{#if logged_in}}
-        <a href="/dashboard" class="navbar-item">Dashboard</a>
-        <button class="no-button button is-light" id="logout">logout</button>
-        {{else}}
-        <a href="/login" class="button is-light">
-            Log in
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
-        <a href="/login" class="button is-primary">
-            <strong>Sign up</strong>
-        </a>
-        {{/if}}
-          {{!-- <a href="/homepage" class="navbar-item">Home</a>
+      </div>
 
-          <a href="/dashboard" class="navbar-item">Dashboard</a>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a href="/homepage" class="navbar-item button is-primary">Home</a>
 
-          <a href="/login" class="button is-primary">
-            <strong>Sign up</strong>
-          </a>
-          
-          <a href="/login" class="button is-light">
-            Log in
-          </a>
-          <a href="/logout" id="logout" class="button is-light">
-            Logout
-          </a> --}}
+            {{#if logged_in}}
+            <a href="/dashboard" class="navbar-item button is-success">My Dashboard</a>
+            <a href="/create-post" class="navbar-item button is-link">Create Post</a>
+            <button class="no-button button is-light" id="logout">Logout</button>
+            {{else}}
+            <a href="/login" class="button is-light">
+              Log in
+            </a>
+            <a href="/signup" class="button is-dark">Sign up</a>
+            {{/if}}
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</nav>
+      </div>
+    </nav>
 
-    </header>
-    <main>        
-      {{{body}}}
-    </main>
-    <footer>
+  </header>
+  <main>
+    {{{body}}}
+  </main>
+  <footer>
 
-    </footer>
-   {{#if logged_in}}
+  </footer>
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-  </body>
+</body>
+
 </html>
