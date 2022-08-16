@@ -65,6 +65,9 @@ The JSON documents include:
 
 ## Languages
 - JavaScript
+- HTML
+- CSS
+- Handlebars
 
 
 ## Links
