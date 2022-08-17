@@ -14,7 +14,7 @@
         </div>
 
         <div class="card">
-            <div class="card-content">
+            <div class="card-content post-container" data-post-id="{{id}}">
                 <div class="content">
                     <p>{{sighting}}</p>
                 </div>
@@ -27,19 +27,34 @@
         
         <div class="add-comment">
             <input 
-
-
+       
+        <div class="comments">
+          <h4>Comments</h4>
+    {{!view all of the post's comments --}}
+    {{#if comments.length}}
+    {{#each comments as |comment|}}
+    <p>{{comment.comment}} by {{comment.user.userName}} on {{format_date comment.date_created}}</p>
+    {{/each}}
+    </div>
+    {{/if}}
         </div>
 
-       {{!-- comments.length (if there are comments in the array) and then use comment.comment, comment.user.username, comment.date etc or what the model uses --}}
-        {{!-- <div class="comments">
-            {{#if (comments.length)}}
-
-            <p>{{comments.comment}}</p>
-            console.log({{comments.comment}})
-            <p>by {{comments.user.userName}} on {{comments.date}}</p>
-            {{/if}}
-        </div> --}}
+        {{#if logged_in}}
+<div class="comment-box-div">
+    <h3> Add a Comment</h3>
+    <form class="comment-form">
+    <textarea id="comment-box-input"></textarea>
+    <div class="button-div">
+    <button class="submitting-button" type="submit">submit</button>
+    </div>
+    </form>
+</div>
+{{else}}
+<p class="login-to-comment">Login to comment</p>
+<div class="button-div">
+    <button onclick="window.location.href='/login';">login</button>
+</div>
+{{/if}}
        
 
         {{!-- <div id="edit-button" class="edit-button">
@@ -53,4 +68,4 @@
 
     </div>
 
-    <script src="/js/dashboard.js"></script>
+    <script src="../js/single-post.js"></script>
