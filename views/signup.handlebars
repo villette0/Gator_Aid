@@ -19,7 +19,11 @@
       <input class="form-input" type="password" id="password-signup" />
     </div>
     <div class="form-group">
-      <button class="button is-dark" type="submit"><strong>Signup</strong></button>
+      <button
+        data-target="modal-js-example"
+        class="button is-dark js-modal-trigger"
+        type="submit"
+      ><strong>Signup</strong></button>
     </div>
   </form>
 </div>
@@ -31,5 +35,16 @@
   </a>
 </div>
 
-
 <script src="./js/signup.js"></script>
+<div id="modal-js-example" class="modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-content">
+    <div class="box">
+      <p>Attention</p>
+      Please select a password that is a minimum of 8 characters.
+    </div>
+  </div>
+
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
