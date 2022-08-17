@@ -56,12 +56,54 @@
 </section>
   </div>
 
+<<<<<<< HEAD
 <div class="hero is-info is-full-height">
+=======
+  <form class="form signup-form">
+    <div class="form-group">
+      <label for="name-signup">name:</label>
+      <input class="form-input" type="text" id="name-signup" />
+    </div>
+    <div class="form-group">
+      <label for="username-signup">username:</label>
+      <input class="form-input" type="text" id="username-signup" />
+    </div>
+    <div class="form-group">
+      <label for="email-signup">email:</label>
+      <input class="form-input" type="text" id="email-signup" />
+    </div>
+    <div class="form-group">
+      <label for="password-signup">password:</label>
+      <input class="form-input" type="password" id="password-signup" />
+    </div>
+    <div class="form-group">
+      <button
+        data-target="modal-js-example"
+        class="button is-dark js-modal-trigger"
+        type="submit"
+      ><strong>Signup</strong></button>
+    </div>
+  </form>
+</div>
+
+<div>
+>>>>>>> main
   <p>Already registered? Click here to login</p>
   <a href="/login" class="button is-dark">
     Log in
   </a>
 </div>
 
-
 <script src="./js/signup.js"></script>
+<div id="modal-js-example" class="modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-content">
+    <div class="box">
+      <p>Attention</p>
+      Please select a password that is a minimum of 8 characters.
+    </div>
+  </div>
+
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
