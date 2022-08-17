@@ -6,12 +6,7 @@ h1 {
     font-size: 34px;
 }
 
-/* .bg-img { 
-    background-image: url() ;
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-attachment: fixed;
-    background-size:  cover;
-    background-color: rgb(103, 228, 35);
-
-} */
+#dashboard-background {
+    background-image: url("https://wallpaperaccess.com/full/6490132.jpg");
+    background-color: lightgreen
+}
