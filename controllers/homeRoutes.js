@@ -64,7 +64,7 @@ router.get('/', async (req, res) => {
           {
             model: Comments,
             attributes: ['comment', 'user_id', 'date_created'],
-            include: [{model: User, attributes: ['username']}]
+            include: [{model: User, attributes: ['userName']}]
           }
         ],
       });

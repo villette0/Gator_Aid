@@ -7,6 +7,19 @@
     title="Gator Tracker" style="border: double green 6px"></iframe>
 </div>
   
+
+<div class="columns" id="dashboard-background">
+  <div class="column">
+   <h1>Welcome, {{userName}} !</h1>
+
+   <iframe width="600px" height="600px"
+   src="https://api.mapbox.com/styles/v1/batgalkatlyn/cl6oilslx000614qqdzj24swp.html?title=false&access_token=pk.eyJ1IjoiYmF0Z2Fsa2F0bHluIiwiYSI6ImNsNm9meWpxZTBhbHozaXRldHhldGp5NDEifQ.wTNr-1vm16YK7gpQFGuXtw&zoomwheel=true#7.07/27.828/-81.554"
+   title="Gator Tracker" style="border: double green 6px"></iframe>
+  </div>
+  
+
+  <div class="column">
+
     <h2>YOUR Recent Sightings</h2>
     {{#each posts as |post|}}
     {{> post-details}}
