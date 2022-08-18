@@ -16,7 +16,7 @@ const userSignUpForm = async (event) => {
     if (response.ok) {
       document.location.replace("/dashboard");
     } else {
-      console.log("Hello World!");
+      console.log("Password must have at least 8 characters!");
     }
   }
 };
